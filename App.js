@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import EnterNumber from './src/Component/EnterNumber'
 import Onetime from './src/Component/Onetime'
 import Signup from './src/Component/Signup'
+
 const stack =createNativeStackNavigator();
 const App = () => {
   const [loading,isLoaded]= useState(true)
@@ -16,7 +17,7 @@ const App = () => {
   })
   return (
     <NavigationContainer>
-      <stack.Navigator >
+      <stack.Navigator initialRouteName='Signup'>
         {loading?
         <stack.Screen options={{headerShown:false}} name='Splash' component={Splash}></stack.Screen>
       :null}
